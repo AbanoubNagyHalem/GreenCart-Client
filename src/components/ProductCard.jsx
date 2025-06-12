@@ -3,8 +3,6 @@ import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
-
   const [count, setCount] = useState(0);
   const { currency, addToCart, removeFromCart, cartItems, navigate } =
     useAppContext();
