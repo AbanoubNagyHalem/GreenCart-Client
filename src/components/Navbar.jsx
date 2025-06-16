@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { user, setUser, setShowUserLogin, navigate } = useAppContext;
+  const { user, setUser, setShowUserLogin, navigate } = useAppContext();
 
   const logout = () => {
     setUser(null);
@@ -65,7 +65,10 @@ const Navbar = () => {
               >
                 My Orders
               </li>
-              <li className="p-1.5 pl-3 hover:bg-primary/10 cursor-pointer">
+              <li
+                onClick={logout}
+                className="p-1.5 pl-3 hover:bg-primary/10 cursor-pointer"
+              >
                 Logout
               </li>
             </ul>
